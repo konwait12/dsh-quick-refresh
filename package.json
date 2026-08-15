@@ -1,0 +1,46 @@
+{
+  "name": "dsh-quick-refresh",
+  "version": "0.1.0",
+  "description": "主动刷新/热应用：不重启 dsh web，把 profile patch 的启用/禁用状态应用到当前 Loader，并尽量热挂载新插件，最后刷新页面生效。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+"keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "refresh",
+    "hot-reload",
+    "plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konwait12/dsh-quick-refresh.git"
+  },
+  "homepage": "https://github.com/konwait12/dsh-quick-refresh",
+  "bugs": {
+    "url": "https://github.com/konwait12/dsh-quick-refresh/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+}

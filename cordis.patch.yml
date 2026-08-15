@@ -1,0 +1,5 @@
+# dsh-quick-refresh bundle patch: mounts the plugin row.
+# When installed through `dsh plugin add`, this file is applied automatically.
+- insert:
+    - id: quick-refresh
+      name: 'dsh-quick-refresh'
