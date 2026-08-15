@@ -1,6 +1,6 @@
 {
   "name": "dsh-quick-refresh",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "面向 DSH 桌面客户端的免重启刷新/热应用插件：把 profile patch 的启用/禁用状态应用到当前 Loader，并尽量热挂载新插件，最后刷新页面生效（浏览器版自带刷新，无需本插件）。",
   "type": "module",
   "main": "lib/index.js",

@@ -8,6 +8,17 @@
 
 - 修正功能定位：浏览器（Web）版自带刷新能力，本插件主要面向没有原生刷新入口的 DSH 桌面版（如 EAC 客户端）用户。
 
+## [0.2.0] - 2026-08-15
+
+### Added
+
+- 热挂载支持带 `config` 的插件（如 pythonCmd 等字面量配置），生成的热挂载条目携带 config。
+- 热挂载候选扩展：除 profile `package.json` 的 dependencies 外，还扫描 node_modules 下所有带 `cordis.patch.yml` 的插件包（手动安装 / junction 链接的插件也能被发现并热挂载）。
+
+### Changed
+
+- `parseSimplePatch` 升级：仍只接受简单 insert 行（id/name + 字面量 config），遇到 `!!js` 表达式、`disabled:` 覆盖、数组等复杂 YAML 时保持原有"跳过、需重启"行为。
+
 ## [0.1.0] - 2026-08-15
 
 ### Added

@@ -67,5 +67,6 @@ npm publish --access public
 
 ## 限制
 
-- 只能热应用已存在于 profile 里的插件/补丁；新增带复杂 `config` 的插件仍可能需要重启。
+- 热挂载支持带**字面量 config** 的插件（v0.2.0+，如 `pythonCmd` 等标量/简单嵌套配置），并会扫描 node_modules 下所有带 `cordis.patch.yml` 的插件包（含手动安装/junction 链接的）。
+- 含 `!!js` 表达式、`disabled:` 覆盖、数组等复杂 YAML 的补丁仍无法热挂载，需重启。
 - 若 `@deepseek-ai/cordis-plugin-include` 不可用，热挂载新插件会跳过，但「应用 disabled 状态 + 刷新页面」仍可用。
