@@ -13,6 +13,9 @@ DSH 桌面客户端主动刷新/热应用插件。
 ## 功能
 
 - 在 **会话页右上角 “session log（轨迹）”标签左侧** 并排插入一个图标按钮（克隆该标签的外观与图标形态）；同时保留 **设置 → 插件 → 刷新** 面板。
+
+  ![按钮位置：会话页右上角 “session log（轨迹）”标签左侧的 ⟳ 刷新按钮](docs/screenshots/refresh-button.png)
+
 - 点击后 host 端会：
   1. 重新读取 `profiles/web/cordis.patch.yml`，把 `disabled: true/false` 应用到当前正在运行的 Loader 条目（无需重启 dsh web）。
   2. 尝试热挂载 profile 中新增的简单插件（纯 `id/name` insert 行）。
